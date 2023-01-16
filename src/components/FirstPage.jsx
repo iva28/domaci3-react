@@ -24,7 +24,7 @@ function FirstPage() {
 
   return (
     <div className="first-page">
-        <NavBar/>
+        
         <h2 id="add-forma-h2">Forma za dodavanje studenta</h2>
       <FormAddStudents  studenti={studenti}/>
     </div>
