@@ -1,6 +1,7 @@
 import React from 'react';
 import FormAddStudents from './FormAddStudents';
 import { useEffect,useState } from 'react';
+import NavBar from './NavBar';
 
 function FirstPage() {
 
@@ -16,6 +17,8 @@ function FirstPage() {
 
   return (
     <div className="first-page">
+        <NavBar/>
+        <h2>Forma za dodavanje studenta</h2>
       <FormAddStudents  studenti={studenti}/>
     </div>
   );
