@@ -17,7 +17,10 @@ code {
 
 .form-add-student{
   width: 500px;
-  margin-left: 700px;
+  margin-left: 500px;
+
+  
+  
 }
 
 #add-forma-h2{
@@ -58,6 +61,7 @@ code {
 }
 
 #pretraga-h1{
+  align-content: center;
   margin-top: 30px;
 }
 #button-pretraga{
@@ -67,3 +71,4 @@ code {
 .link{
   margin-top: 40px;
 }
+

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FormPretraga from './FormPretraga'
 import { useLocation } from 'react-router-dom'
 
@@ -24,10 +24,12 @@ function Pretraga(props) {
         alert("Nema datog studenta");
     }
 
+   
+
   return (
     <div className='pretraga'>
         <h1 id='pretraga-h1'>Pretraga studenata..</h1>
-        <FormPretraga studenti={props.studenti} pretraga={pretraga} />
+        <FormPretraga studenti={props.studenti} pretraga={pretraga}/>
       
     </div>
   )

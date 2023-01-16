@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FirstPage from './components/FirstPage';
 import NavBar from './components/NavBar';
 import Pretraga from './components/Pretraga';
+import Footer from './components/Footer';
 
 import axios from 'axios';
 import { useEffect,useState } from 'react';
@@ -27,6 +28,7 @@ function App() {
           <Route path="/search" element={<Pretraga studenti={studenti}/>}/>
          
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );
