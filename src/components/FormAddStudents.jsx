@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function FormAddStudents(props) {
   //ucitani studenti
@@ -37,6 +38,17 @@ console.log(studenti);
                 <input type={'text'} className="form-control" value={student.broj_indeksa}  onChange= {e => setStudent({...student,broj_indeksa:e.target.value}) }/>
             </div>
             <button type="button" className="btn btn-primary" id="dugme_novi" onClick={()=>noviStudent(student)}>Dodaj</button>
+
+            <div className="link">
+              <Link 
+              to="/search"
+              state= {{
+                studenti:studenti,
+              }}
+              >
+              <button className="btn btn-danger" id="button-pretraga">Pređi na pretraživanje..</button>
+              </Link>
+            </div>
             
     </div>
   )

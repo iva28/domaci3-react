@@ -1,20 +1,20 @@
 import React from 'react';
 import FormAddStudents from './FormAddStudents';
-import { useEffect,useState } from 'react';
+//import { useEffect,useState } from 'react';
 import NavBar from './NavBar';
 import axios from 'axios';
 
-function FirstPage() {
+function FirstPage({studenti,loading}) {
 
-    const [studenti, setStudenti] = useState([]);
-    const[loading, setLoading] = useState(true);
+  //  const [studenti, setStudenti] = useState([]);
+   // const[loading, setLoading] = useState(true);
     
-    useEffect(()=> {
-        axios.get("http://127.0.0.1:8000/api/students").then(odgovor => {
-            setStudenti(odgovor.data.data);
-            setLoading(false);
-        })
-    },[]);
+   // useEffect(()=> {
+   //     axios.get("http://127.0.0.1:8000/api/students").then(odgovor => {
+     //       setStudenti(odgovor.data.data);
+       //     setLoading(false);
+       // })
+    //},[]);
 
     console.log(studenti);
     if (loading) {
