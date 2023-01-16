@@ -7,15 +7,20 @@ import axios from 'axios';
 function FirstPage() {
 
     const [studenti, setStudenti] = useState([]);
-
+    const[loading, setLoading] = useState(true);
     
     useEffect(()=> {
         axios.get("http://127.0.0.1:8000/api/students").then(odgovor => {
             setStudenti(odgovor.data.data);
+            setLoading(false);
         })
     },[]);
 
     console.log(studenti);
+    if (loading) {
+      return <h1>Učitavanje...</h1>
+    }
+
 
   return (
     <div className="first-page">
