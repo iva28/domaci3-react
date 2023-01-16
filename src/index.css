@@ -17,7 +17,12 @@ code {
 
 .form-add-student{
   width: 500px;
-  margin-left: 700px;
+  margin-left: 500px;
+}
+
+#add-forma-h2{
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .topnav {
