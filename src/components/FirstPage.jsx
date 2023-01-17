@@ -4,7 +4,7 @@ import FormAddStudents from './FormAddStudents';
 import NavBar from './NavBar';
 import axios from 'axios';
 
-function FirstPage({studenti,loading}) {
+function FirstPage({studenti,loading,changePageName}) {
 
   //  const [studenti, setStudenti] = useState([]);
    // const[loading, setLoading] = useState(true);
@@ -21,6 +21,7 @@ function FirstPage({studenti,loading}) {
       return <h1>Učitavanje...</h1>
     }
 
+    changePageName(true);
 
   return (
     <div className="first-page">
