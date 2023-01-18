@@ -1,0 +1,17 @@
+{
+    "1": {
+      "ime": "Ana",
+      "prezime": "Anic",
+      "broj_indeksa": "2022/0220"
+    },
+    "2": {
+        "ime": "Tara",
+        "prezime": "Tarin",
+        "broj_indeksa": "2012/0242"
+      },
+      "3": {
+        "ime": "Milos",
+        "prezime": "Milosevic",
+        "broj_indeksa": "2020/0001"
+      }
+  }
