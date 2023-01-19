@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 
 function FormAddStudents(props) {
   //ucitani studenti
-  const[studenti,setStudenti] = useState(props.studenti);
-
+  const[studenti1,setStudenti1] = useState(props.studenti);
 
 const[student,setStudent] = useState({
     ime:'',
@@ -13,18 +12,18 @@ const[student,setStudent] = useState({
     broj_indeksa:'',
 })
 
-console.log(studenti);
+//console.log(studenti);
 
 function noviStudent(student) {
-  setStudenti(studenti => [...studenti,student]);
+  setStudenti1(studenti1 => [...studenti1,student]);
   alert('Uspesno dodat student '+student.ime+'!');
 }
 
-console.log(studenti);
+console.log(studenti1);
 
   return (
+    <div className="form-parent">
     <div className="form-add-student">
-        
         <div className="add-student-fields">
                 <label><b>Ime:</b> </label>
                 <input type={'text'} className="form-control" value={student.ime} onChange= {e => setStudent({...student,ime:e.target.value}) }/>
@@ -43,13 +42,13 @@ console.log(studenti);
               <Link 
               to="/search"
               state= {{
-                studenti:studenti,
+                studenti:studenti1,
               }}
               >
               <button className="btn btn-danger" id="button-pretraga">Pređi na pretraživanje..</button>
               </Link>
             </div>
-            
+            </div>
     </div>
   )
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {MdOutlineSchool} from 'react-icons/md'
+import {IoHandRightOutline} from 'react-icons/io5'
+
 
 function NavBar({indicate}) {
   return (
@@ -11,7 +13,9 @@ function NavBar({indicate}) {
       :
       (<Link to="/" className="active" >Searching</Link>)
   }
+  <Link to="/about" className="active" > About us<IoHandRightOutline/></Link>
     </div>
+    
   )
 }
 

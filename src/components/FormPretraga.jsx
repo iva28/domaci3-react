@@ -14,8 +14,7 @@ function FormPretraga(props) {
   return (
     <div className='form-pretraga'>
     <input type={'text'} className="form-control"  value={ime} onChange={handle} />
- <button type="button" onClick={()=> props.pretraga(ime)} className="btn btn-outline-primary" id="button-pretraga">Pretraži</button>
- 
+    <button type="button" onClick={()=> props.pretraga(ime)} className="btn btn-outline-primary" id="button-pretraga">Pretraži</button>
     </div>
   )
 }

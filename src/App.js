@@ -22,9 +22,9 @@ function App() {
         //})
    // },[]);
 
-   
-    const getData=()=>{
-    fetch('data/studenti.json'
+  
+    const getData= ()=>{
+    fetch('./data/studenti.json'
     ,{
       headers : { 
         'Content-Type': 'application/json',
@@ -54,15 +54,13 @@ function App() {
 
   }
   useEffect(()=>{
-    getData()
-  },[])
-
+    getData()  
+ },[])
 
      function changePageName(vred) {
       setIndicate(vred);
     }
 
-    
 
   return (
     <div className="App">
@@ -70,7 +68,7 @@ function App() {
        <NavBar indicate={indicate}/>
         <Routes>
           <Route path="/"  element={<FirstPage studenti={studenti} loading={loading} changePageName={changePageName} />}/>
-          <Route path="/search" element={<Pretraga studenti={studenti} changePageName={changePageName}/>}/>
+          <Route path="/search" element={<Pretraga  changePageName={changePageName}/>}/>
           <Route  path="/about" element={<AboutUs/>}/>
         </Routes>
        

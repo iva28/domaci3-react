@@ -14,13 +14,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.form-parent{
+  display: table;
+  width: 100%;
+}
 
 .form-add-student{
-  width: 500px;
-  margin-left: 500px;
-
-  
-  
+  display: table-cell;
+  width: 80%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 #add-forma-h2{
@@ -66,9 +69,21 @@ code {
 }
 #button-pretraga{
   width: 200px;
+  margin-top: 20px;
 }
 
 .link{
   margin-top: 40px;
 }
 
+#button-paginacija{
+  width: 100px;
+  padding: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
