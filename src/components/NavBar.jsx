@@ -4,12 +4,16 @@ import {MdOutlineSchool} from 'react-icons/md'
 import {IoHandRightOutline} from 'react-icons/io5'
 
 
-function NavBar({indicate}) {
+function NavBar({studenti,indicate}) {
   return (
     <div className='topnav'>
       <Link to="/" className="active" > <MdOutlineSchool/></Link>
       <Link to="/" className="active" >First Page</Link>
-      {indicate==true ? (<Link to="/search" className="active" >Search</Link>) 
+      {indicate==true ? (<Link to="/search" 
+       state= {{
+        studenti:studenti,
+      }}
+      className="active" >Search</Link>) 
       :
       (<Link to="/" className="active" >Searching</Link>)
   }

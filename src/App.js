@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 //import axios from 'axios';
 import { useEffect,useState } from 'react';
 import AboutUs from './components/AboutUs';
+
 //import Pagination from './components/Pagination';
 
 function App() {
@@ -65,14 +66,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-       <NavBar indicate={indicate}/>
+       <NavBar studenti ={studenti} indicate={indicate}/>
         <Routes>
           <Route path="/"  element={<FirstPage studenti={studenti} loading={loading} changePageName={changePageName} />}/>
-          <Route path="/search" element={<Pretraga  changePageName={changePageName}/>}/>
+          <Route path="/search"  element={<Pretraga  studenti={studenti} changePageName={changePageName}/>}/>
           <Route  path="/about" element={<AboutUs/>}/>
-        </Routes>
-       
-        <Footer/>
+        </Routes>    
+        <Footer studenti ={studenti}/>
       </Router>
     </div>
   );

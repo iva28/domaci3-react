@@ -7,7 +7,6 @@ const[adresa,setAdresa] = useState('');
 
 const proveriIP = async () => {
     try {
-
     const response = await fetch('https://ipapi.co/json/');
     const data = await response.json();
     setAdresa(data);
