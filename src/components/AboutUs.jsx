@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'
 import IPAdresa from './IPAdresa'
 
 
-function AboutUs() {
+function AboutUs({ changePageName}) {
+
+  changePageName(true);
+
   return (
     <div className="about-us">
       <h5>Ovo je sajt za evidenciju studenata, namenjen fakultetima i njegovim zaposlenima.</h5>

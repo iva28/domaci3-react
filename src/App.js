@@ -70,7 +70,7 @@ function App() {
         <Routes>
           <Route path="/"  element={<FirstPage studenti={studenti} loading={loading} changePageName={changePageName} />}/>
           <Route path="/search"  element={<Pretraga  studenti={studenti} changePageName={changePageName}/>}/>
-          <Route  path="/about" element={<AboutUs/>}/>
+          <Route  path="/about" element={<AboutUs  changePageName={changePageName}/>}/>
         </Routes>    
         <Footer studenti ={studenti}/>
       </Router>
